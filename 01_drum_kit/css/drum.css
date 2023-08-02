@@ -1,0 +1,70 @@
+body{
+    background: url(../img/DrumWallPaper.jpg) center center;
+    background-size: cover;
+    font-size: 10px;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    /* 全版面背景圖 */
+}
+h1{
+  text-align: center;
+  position: absolute;
+  top:50px;
+  left: 0;
+  right: 0;
+  font-size: 1.7rem;
+  color: wheat;
+  text-shadow: 0 0 .5rem aliceblue;
+}
+.keys {/*所有按鍵的父元素*/
+    display: flex;
+    flex: 1; /*當空間不夠會自動壓縮元素到內容物的大小*/
+    min-height: 100vh;/*最小高度視窗高*/
+    align-items: center;
+    justify-content: center;
+    /* 元素置中 */
+  }
+  
+  .key {/*個別按鍵設定*/
+    border: .4rem solid rgb(255, 0, 0);
+    border-radius: .5rem;
+    margin: 1rem;/*按鍵之間的間距，不使用會黏一起*/
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .1s ease;
+    width: 10rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgba(207, 207, 207, 0.4);/*底色*/
+    text-shadow: 0 0 2rem rgb(226, 196, 196);/* 模糊的文字陰影作為外光暈*/
+    cursor: help;
+  }
+  .key:hover::after{
+    position: absolute;
+    width: fit-content;
+    top:20vh;
+    left: 30vw;
+    right:30vw;
+    border: 1px dotted white;
+    background-color: rgba(240, 248, 255, 0.281);
+    content: "我沒寫滑鼠或觸控觸發，只有鍵盤才有效果喔";
+  }
+  .playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #e6d494;
+  } 
+  /* 注意!這是為了給JS添加class用而預先寫好的class，按鍵觸發添加這class後按鈕才會有形態變化  */
+  
+  kbd {
+    display: block;
+    font-size: 4rem;
+  }
+  
+  .sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+  }
