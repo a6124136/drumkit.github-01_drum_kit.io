@@ -40,16 +40,7 @@ h1{
     text-shadow: 0 0 2rem rgb(226, 196, 196);/* 模糊的文字陰影作為外光暈*/
     cursor: help;
   }
-  .key:hover::after{
-    position: absolute;
-    width: fit-content;
-    top:20vh;
-    left: 30vw;
-    right:30vw;
-    border: 1px dotted white;
-    background-color: rgba(240, 248, 255, 0.281);
-    content: "我沒寫滑鼠或觸控觸發，只有鍵盤才有效果喔";
-  }
+  
   .playing {
     transform: scale(1.1);
     border-color: #ffc600;
