@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hang-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrumKit</title>
+    <link rel="stylesheet" href="css/drum.css">
+    <script src="js/drum.js"></script>
+</head>
+<body>
+    <h1>按下對應按鍵來打鼓</h1>
+    <div class="keys">
+        <!-- kbd為鍵盤輸入元素的HTML標籤，行內元素 -->
+        <div data-key="65" class="key">
+          <kbd>A</kbd>
+          <span class="sound">clap</span>
+        </div>
+        <!-- 每組按鍵DIV包含觸發的data-key"值"跟通用格式key -->
+        <div data-key="83" class="key">
+          <kbd>S</kbd>
+          <span class="sound">hihat</span>
+        </div>
+        <div data-key="68" class="key">
+          <kbd>D</kbd>
+          <span class="sound">kick</span>
+        </div>
+        <div data-key="70" class="key">
+          <kbd>F</kbd>
+          <span class="sound">openhat</span>
+        </div>
+        <div data-key="71" class="key">
+          <kbd>G</kbd>
+          <span class="sound">boom</span>
+        </div>
+        <div data-key="72" class="key">
+          <kbd>H</kbd>
+          <span class="sound">ride</span>
+        </div>
+        <div data-key="74" class="key">
+          <kbd>J</kbd>
+          <span class="sound">snare</span>
+        </div>
+        <div data-key="75" class="key">
+          <kbd>K</kbd>
+          <span class="sound">tom</span>
+        </div>
+        <div data-key="76" class="key">
+          <kbd>L</kbd>
+          <span class="sound">tink</span>
+        </div>
+      </div>
+      <!-- 總共9個按鍵 -->
+      <!-- 以下是要導入的音效檔，加上data-key="??"為每個音效檔命名對應KeyCode供JS使用 -->
+    <audio src="sound_effect/boom.wav" data-key="71"></audio>
+    <audio src="sound_effect/clap.wav" data-key="65"></audio>
+    <audio src="sound_effect/hihat.wav" data-key="83"></audio>
+    <audio src="sound_effect/kick.wav" data-key="68"></audio>
+    <audio src="sound_effect/openhat.wav" data-key="70"></audio>
+    <audio src="sound_effect/ride.wav" data-key="72"></audio>
+    <audio src="sound_effect/snare.wav" data-key="74"></audio>
+    <audio src="sound_effect/tink.wav" data-key="76"></audio>
+    <audio src="sound_effect/tom.wav" data-key="75"></audio>
+    
+</body>
+</html>
