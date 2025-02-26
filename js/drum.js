@@ -44,7 +44,16 @@ html.addEventListener("keydown", function (e) {
   html.addEventListener("click", function (e) {
     //   console.log(e.keyCode);
       //以下函式操作按鍵撥放音樂 
-        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const target=e.target;
+      const testHaveDatakey=target.getAttribute("data-key");
+      let key;
+      if(testHaveDatakey==null){
+        key=target.parentElement.getAttribute("data-key");
+      }
+      else{
+        key=testHaveDatakey;
+      };
+        const audio = document.querySelector(`audio[data-key="${key}"]`);
       //把所有audio的html標籤作為物件取到js內部，呼叫是以data-key="e.keyCode"的方式，也就是當前按什麼按鍵就出現什麼值
       //${}為把變數或表達式引用為數值的寫法
        if(audio) {
@@ -74,5 +83,4 @@ html.addEventListener("keydown", function (e) {
         }
         //如同添加Class變化那邊的作法，只是因為全頁觸發如果按在非按鍵上會報錯，必須多寫一個else return直接結束不執行動作
     
-      console.log(dom,audio);//在主控台確認是否輸出正確，這邊我原本寫querySelectorAll導致回傳node.list
       })
